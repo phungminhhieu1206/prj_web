@@ -1,0 +1,50 @@
+#section-detail {
+    width: 90%;
+    height: 600px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 10px 3px grey;
+    position: relative;
+}
+
+div#section-detail {
+    overflow: hidden;
+    border: 5px solid #3949ab;
+}
+
+div#section-detail figure img {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+div#section-detail figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    transition: 1s ease-in-out;
+}
+
+
+/* style next and prev button */
+
+.change_slide {
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 580px;
+}
+
+.change_slide .btn {
+    border: none;
+    outline: none;
+    background: #888;
+    padding: 10px 30px;
+    font-size: 20px;
+    color: #ddd;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.change_slide .btn:hover {
+    background: #111;
+}
