@@ -1,10 +1,10 @@
 <div id="sidebar" class="fl-left">
     <ul id="sidebar-menu">
         <li class="nav-item">
-            <a href="" title="" class="nav-link nav-toggle">
+            <span class="nav-link nav-toggle">
                 <span class="fa fa-map icon"></span>
                 <span class="title">Trang</span>
-            </a>
+            </span>
             <ul class="sub-menu">
                 <li class="nav-item">
                     <a href="?mod=pages&controller=index&action=add_page" title="" class="nav-link">Thêm mới</a>
@@ -15,10 +15,10 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a href="" title="" class="nav-link nav-toggle">
+            <span class="nav-link nav-toggle">
                 <span class="fa fa-pencil-square-o icon"></span>
                 <span class="title">Bài viết</span>
-            </a>
+            </span>
             <ul class="sub-menu">
                 <li class="nav-item">
                     <a href="?mod=post&controller=index&action=add_post" title="" class="nav-link">Thêm mới</a>
@@ -32,10 +32,10 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a href="" title="" class="nav-link nav-toggle">
+            <span class="nav-link nav-toggle">
                 <span class="fa fa-product-hunt icon"></span>
                 <span class="title">Sản phẩm</span>
-            </a>
+            </span>
             <ul class="sub-menu">
                 <li class="nav-item">
                     <a href="?mod=product&action=add_product" title="" class="nav-link">Thêm mới</a>
@@ -49,10 +49,10 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a href="" title="" class="nav-link nav-toggle">
+            <span class="nav-link nav-toggle">
                 <span class="fa fa-database icon"></span>
                 <span class="title">Bán hàng</span>
-            </a>
+            </span>
             <ul class="sub-menu">
                 <li class="nav-item">
                     <a href="?mod=customers&action=index" title="" class="nav-link">Danh sách đơn hàng</a>
@@ -63,10 +63,10 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a href="#" title="" class="nav-link nav-toggle">
+            <span class="nav-link nav-toggle">
                 <span class="fa fa-cubes icon"></span>
                 <span class="title">Khối giao diện</span>
-            </a>
+            </span>
             <ul class="sub-menu">
                 <li class="nav-item">
                     <a href="?mod=menu&action=add_menu" title="" class="nav-link">Thêm mới</a>
@@ -80,10 +80,10 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a href="#" title="" class="nav-link nav-toggle">
+            <span class="nav-link nav-toggle">
                 <i class="fa fa-sliders" aria-hidden="true"></i>
                 <span class="title">Slider</span>
-            </a>
+            </span>
             <ul class="sub-menu">
                 <li class="nav-item">
                     <a href="?mod=slider&action=add_slider" title="" class="nav-link">Thêm mới</a>
@@ -94,10 +94,10 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a href="#" title="" class="nav-link nav-toggle">
+            <span class="nav-link nav-toggle">
                 <i class="fa fa-file-image-o" aria-hidden="true"></i>
                 <span class="title">Media</span>
-            </a>
+            </span>
             <ul class="sub-menu">
                 <li class="nav-item">
                     <a href="?mod=media&action=index" title="" class="nav-link">Danh sách media</a>

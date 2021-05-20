@@ -1,148 +1,96 @@
-$(document).ready(function () {
-//  SLIDER
-    var slider = $('#slider-wp .section-detail');
-    slider.owlCarousel({
-        autoPlay: 4500,
-        navigation: false,
-        navigationText: false,
-        paginationNumbers: false,
-        pagination: true,
-        items: 1, //10 items above 1000px browser width
-        itemsDesktop: [1000, 1], //5 items between 1000px and 901px
-        itemsDesktopSmall: [900, 1], // betweem 900px and 601px
-        itemsTablet: [600, 1], //2 items between 600 and 0
-        itemsMobile: true // itemsMobile disabled - inherit from itemsTablet option
-    });
+function ready(fn) {
+    if (document.readyState != 'loading') {
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
 
-//  ZOOM PRODUCT DETAIL
-    $("#zoom").elevateZoom({gallery: 'list-thumb', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'});
+ready(() => {
+    //  SCROLL TOP
+    window.addEventListener("scroll", function (e) {
+        const buttonToTop = this.document.getElementById('btn-top');
 
-//  LIST THUMB
-    var list_thumb = $('#list-thumb');
-    list_thumb.owlCarousel({
-        navigation: true,
-        navigationText: false,
-        paginationNumbers: false,
-        pagination: false,
-        stopOnHover: true,
-        items: 5, //10 items above 1000px browser width
-        itemsDesktop: [1000, 5], //5 items between 1000px and 901px
-        itemsDesktopSmall: [900, 5], // betweem 900px and 601px
-        itemsTablet: [768, 5], //2 items between 600 and 0
-        itemsMobile: true // itemsMobile disabled - inherit from itemsTablet option
-    });
-
-//  FEATURE PRODUCT
-    var feature_product = $('#feature-product-wp .list-item');
-    feature_product.owlCarousel({
-        autoPlay: true,
-        navigation: true,
-        navigationText: false,
-        paginationNumbers: false,
-        pagination: false,
-        stopOnHover: true,
-        items: 4, //10 items above 1000px browser width
-        itemsDesktop: [1000, 4], //5 items between 1000px and 901px
-        itemsDesktopSmall: [800, 3], // betweem 900px and 601px
-        itemsTablet: [600, 2], //2 items between 600 and 0
-        itemsMobile: [375, 1] // itemsMobile disabled - inherit from itemsTablet option
-    });
-
-//  SAME CATEGORY
-    var same_category = $('#same-category-wp .list-item');
-    same_category.owlCarousel({
-        autoPlay: true,
-        navigation: true,
-        navigationText: false,
-        paginationNumbers: false,
-        pagination: false,
-        stopOnHover: true,
-        items: 4, //10 items above 1000px browser width
-        itemsDesktop: [1000, 4], //5 items between 1000px and 901px
-        itemsDesktopSmall: [800, 3], // betweem 900px and 601px
-        itemsTablet: [600, 2], //2 items between 600 and 0
-        itemsMobile: [375, 1] // itemsMobile disabled - inherit from itemsTablet option
-    });
-
-//  SCROLL TOP
-    $(window).scroll(function () {
-        if ($(this).scrollTop() != 0) {
-            $('#btn-top').stop().fadeIn(150);
+        if (document.body.getBoundingClientRect().top != 0) {
+            buttonToTop.style = "transition: opacity 400ms;";
         } else {
-            $('#btn-top').stop().fadeOut(150);
+            buttonToTop.style = "opacity: 0";
         }
     });
-    $('#btn-top').click(function () {
-        $('body,html').stop().animate({scrollTop: 0}, 800);
+    document.getElementById('btn-top').addEventListener("click", function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     });
 
-// CHOOSE NUMBER ORDER
-    var value = parseInt($('#num-order').attr('value'));
-    $('#plus').click(function () {
+    // CHOOSE NUMBER ORDER
+    var value = parseInt(document.getElementById('num-order')?.getAttribute('value'));
+
+    document.getElementById('plus')?.addEventListener("click", function () {
         value++;
-        $('#num-order').attr('value', value);
-        update_href(value);
+        document.getElementById('num-order').setAttribute('value', value);
+        // update_href(value);
     });
-    $('#minus').click(function () {
+    document.getElementById('minus')?.addEventListener("click", function () {
         if (value > 1) {
             value--;
-            $('#num-order').attr('value', value);
+            document.getElementById('num-order').setAttribute('value', value);
         }
-        update_href(value);
+        // update_href(value);
     });
 
-//  MAIN MENU
-    $('#category-product-wp .list-item > li').find('.sub-menu').after('<i class="fa fa-angle-right arrow" aria-hidden="true"></i>');
+    //  MAIN MENU
+    document.querySelector('#category-product-wp .list-item > li')?.querySelector('.sub-menu').insertAdjacentHTML("afterend", '<i class="fa fa-angle-right arrow" aria-hidden="true"></i>');
 
-//  TAB
-    tab();
+    //  TAB
+    // tab();
 
     //  EVEN MENU RESPON
-    $('html').on('click', function (event) {
-        var target = $(event.target);
-        var site = $('#site');
+    document.querySelector('#btn-respon i').addEventListener('click', function (event) {
+        var site = document.querySelector('#site');
 
-        if (target.is('#btn-respon i')) {
-            if (!site.hasClass('show-respon-menu')) {
-                site.addClass('show-respon-menu');
-            } else {
-                site.removeClass('show-respon-menu');
-            }
+
+        if (!site.classList.contains('show-respon-menu')) {
+            site.classList.add('show-respon-menu');
         } else {
-            $('#container').click(function () {
-                if (site.hasClass('show-respon-menu')) {
-                    site.removeClass('show-respon-menu');
-                    return false;
-                }
-            });
+            site.classList.remove('show-respon-menu');
+        }
+
+    });
+
+    document.querySelector('#container').addEventListener("click", function (e) {
+        const btnButton = document.querySelector('#btn-respon i');
+        if (e.target === btnButton) return;
+        if (site.classList.contains('show-respon-menu')) {
+            site.classList.remove('show-respon-menu');
+            return false;
         }
     });
 
-//  MENU RESPON
-    $('#main-menu-respon li .sub-menu').after('<span class="fa fa-angle-right arrow"></span>');
-    $('#main-menu-respon li .arrow').click(function () {
-        if ($(this).parent('li').hasClass('open')) {
-            $(this).parent('li').removeClass('open');
+    //  MENU RESPON
+    document.querySelector('#main-menu-respon li .sub-menu').insertAdjacentHTML('afterend', `<span class="fa fa-angle-right arrow"></span>`);
+    const arrow = document.querySelector('#main-menu-respon li .arrow');
+    arrow.addEventListener("click", function (e) {
+        const parent = arrow.closest('li');
+        if (parent.classList.contains('open')) {
+            parent.classList.remove('open');
         } else {
-
-//            $('.sub-menu').slideUp();
-//            $('#main-menu-respon li').removeClass('open');
-            $(this).parent('li').addClass('open');
-//            $(this).parent('li').find('.sub-menu').slideDown();
+            parent.classList.add('open');
         }
     });
 });
 
-function tab() {
-    var tab_menu = $('#tab-menu li');
-    tab_menu.stop().click(function () {
-        $('#tab-menu li').removeClass('show');
-        $(this).addClass('show');
-        var id = $(this).find('a').attr('href');
-        $('.tabItem').hide();
-        $(id).show();
-        return false;
-    });
-    $('#tab-menu li:first-child').addClass('show');
-    $('.tabItem:first-child').show();
-}
+
+
+// function tab() {
+//     var tab_menu = document.querySelector('#tab-menu li');
+//     tab_menu.pause().click(function () {
+//         tab_menu.classList.remove('show');
+//         tab_menu.classList.add('show');
+//         var id = tab_menu.querySelector('a').getAttribute('href');
+//         document.querySelector('.tabItem').style.display = "none";
+//         document.querySelector(id).style.display = "";
+//         return false;
+//     });
+//     document.querySelector('#tab-menu li:first-child').classList.add('show');
+//     document.querySelector('.tabItem:first-child').style.display = "";
+// }
