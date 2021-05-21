@@ -177,7 +177,7 @@ function select_districtAction(){
     }
     echo $select_district;
 }
-# select district
+# select commune
 function select_communeAction(){
     $select_commune = '<option value="">-- Chọn Xã/Phường --</option>';
     if(!empty($_POST['district'])){
