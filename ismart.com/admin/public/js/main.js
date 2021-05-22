@@ -13,7 +13,7 @@ ready(function () {
 
     //  CHECK ALL
     const input = document.querySelector('input[name="checkAll"]');
-    input.addEventListener("click", function () {
+    input?.addEventListener("click", function () {
 
         if (!input.classList.contains("checked")) {
             document.querySelectorAll('.list-table-wp tbody tr td input[type="checkbox"]').forEach(item => item.setAttribute("checked", ""));
