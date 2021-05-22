@@ -111,14 +111,14 @@ function productAction(){
 function pagination_catAction()
 {
     $output = '';
-    if (isset($_POST['cat_id'])) {
+    if (isset($_POST['cat_id']) && !empty($_POST['cat_id'])) {
         $cat_id = $_POST['cat_id'];
         $cat = db_fetch_assoc("SELECT `title` FROM `tbl_product_cat` WHERE `cat_id` = '{$cat_id}'");
     }
     $query = "SELECT* FROM `tbl_products` WHERE `product_status` = 'Approved' AND (`parent_cat` = '{$cat['title']}' OR `brand` = '{$cat['title']}' OR `product_type` = '{$cat['title']}') ";
     # filter by price
-    if (isset($_POST['price'])) {
-        $price = implode('', $_POST['price']);
+    if (isset($_POST['price']) && !empty($_POST['price'])) {
+        $price = $_POST['price'];
         if ($price == 1) {
             $query .= 'AND `product_price_new` < 500000 ';
         }
@@ -137,7 +137,7 @@ function pagination_catAction()
     }
     # filter by brand
     if (isset($_POST['brand']) && !empty($_POST['brand'])) {
-        $brand = implode(',', $_POST['brand']);
+        $brand = $_POST['brand'];
         $query .= "AND (`parent_cat` IN('{$brand}') OR `brand` IN('{$brand}') OR `product_type` IN('{$brand}')) ";
     }
     # filter by arrange
