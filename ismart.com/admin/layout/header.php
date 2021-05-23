@@ -10,11 +10,12 @@
         <link href="public/main.css" rel="stylesheet" type="text/css"/>
         <link href="public/responsive.css" rel="stylesheet" type="text/css"/>
 
-        <script src="public/js/jquery-2.2.4.min.js" type="text/javascript"></script>
-        <script src="public/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <!-- <script src="public/js/jquery-2.2.4.min.js" type="text/javascript"></script> -->
+        <!-- <script src="public/js/bootstrap/bootstrap.min.js" type="text/javascript"></script> -->
         <script src="public/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
         <script src="public/js/main.js" type="text/javascript"></script>
         <script src="public/js/app.js" type="text/javascript"></script>
+        <script src="public/js/new.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="site">
@@ -78,7 +79,7 @@
                             </li>
                         </ul>
                         <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
-                            <button class="dropdown-toggle clearfix" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button class="dropdown-toggle clearfix" type="button" onclick="open_dropdown_menu()"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <div id="thumb-circle" class="fl-left">
                                     <img src="<?php echo get_info_account('avatar')?>">
                                 </div>

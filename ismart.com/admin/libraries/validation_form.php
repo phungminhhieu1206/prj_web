@@ -56,7 +56,7 @@ function form_error($label_field){
     if(!empty($error[$label_field])) return "<p class='error'>{$error[$label_field]}</p>";
 }
 function set_value($label_field){
-    global $$label_field;
+    global $label_field;
     if(!empty($$label_field)) return $$label_field;
 }
 function is_exists($table, $key, $value) {

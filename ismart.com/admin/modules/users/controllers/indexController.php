@@ -168,12 +168,14 @@ function loginAction() {
                 $error['acount'] = 'Tên đăng nhập hoặc mật khẩu không đúng';
             }
         } else {
-            print_r($error);
+            // print_r($error);
         }
     }
     load_view('login');
 }
+
 function logoutAction() {
+    global $username;
     // update_not_active_user();
     update_not_active_admin();
     setcookie('is_login', true, time() - 3600);

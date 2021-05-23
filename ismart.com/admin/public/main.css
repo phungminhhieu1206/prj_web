@@ -1,3 +1,10 @@
+#main-content-wp {
+    min-height: 700px;
+}
+
+
+/* ----------------------------- */
+
 .table {
     width: 100%;
 }

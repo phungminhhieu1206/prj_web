@@ -1,15 +1,14 @@
-
 "use strict";
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function(event) {
     const image = document.getElementById("zoom");
     if (image === null) {
         return;
     }
-    image.addEventListener('mousemove', function (e) {
+    image.addEventListener('mousemove', function(e) {
         hoverImage.apply(e.target, [e]);
     });
 
-    image.addEventListener('mouseout', function (e) {
+    image.addEventListener('mouseout', function(e) {
         mouseOut.apply(e.target, [e]);
     });
 

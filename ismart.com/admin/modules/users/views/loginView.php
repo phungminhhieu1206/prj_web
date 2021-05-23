@@ -1,7 +1,7 @@
 
 <html>
     <head>
-        <title>Form Đăng nhập</title>
+        <title>Đăng nhập</title>
         <link href="public/reset.css" rel="stylesheet" type="text/css"/>
         <link href="public/login.css" rel="stylesheet" type="text/css"/>
     </head>
@@ -23,6 +23,6 @@
 
                 </form>
             </div>    
-        </div>--
+        </div>
     </body>
 </html>
