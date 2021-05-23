@@ -6,14 +6,14 @@ function ready(fn) {
     }
 }
 
-ready(function() {
+ready(function () {
 
     // var height = $(window).height() - $('#footer-wp').outerHeight(true) - $('#header-wp').outerHeight(true);
     // $('#content').css('min-height', height);
 
     //  CHECK ALL
     const input = document.querySelector('input[name="checkAll"]');
-    input.addEventListener("click", function() {
+    input?.addEventListener("click", function () {
 
         if (!input.classList.contains("checked")) {
             document.querySelectorAll('.list-table-wp tbody tr td input[type="checkbox"]').forEach(item => item.setAttribute("checked", ""));
@@ -34,7 +34,7 @@ ready(function() {
         item.closest('li').querySelector('.sub-menu').style.display = "none";
     })
     sidebar_menu.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             const slideTag = item.closest('li').querySelector('.sub-menu');
             if (slideTag.style.display === "none") {
                 slideDown(slideTag);
@@ -48,17 +48,17 @@ ready(function() {
 
 
     // ONCHANGE UPLOAD_IMAGES
-    show_upload_image = function() {
+    show_upload_image = function () {
         var upload_image = document.getElementById("upload-thumb")
         if (upload_image.files && upload_image.files[0]) {
             var reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 document.getElementById('upload-image').setAttribute('src', e.target.result)
             };
             reader.readAsDataURL(upload_image.files[0]);
         }
     }
-    show_upload_multi_image = function() {
+    show_upload_multi_image = function () {
         var upload_image = document.getElementById("upload-thumb");
         if (upload_image.files) {
             let str_class_img = "";
@@ -68,7 +68,7 @@ ready(function() {
                 let selector_img = "#upload-image-" + i;
 
                 var reader = new FileReader();
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     $(selector_img).attr('src', e.target.result);
                     console.log(selector_img);
                 };
@@ -137,3 +137,4 @@ let slideDown = (target, duration = 300) => {
         target.style.removeProperty('transition-property');
     }, duration);
 }
+

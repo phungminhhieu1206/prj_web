@@ -10,7 +10,7 @@ ready(() => {
     const temp = document.querySelectorAll('.select-parent-cat');
     if (temp === null) return;
     temp.forEach(element =>
-        element.addEventListener('change', function() {
+        element.addEventListener('change', function () {
             var parent_cat = element.value;
             var data = { parent_cat: parent_cat };
             console.log(data);
@@ -21,7 +21,7 @@ ready(() => {
                 },
                 body: JSON.stringify(data),
             }).
-            then((response) => {
+                then((response) => {
                     if (!response.ok) {
                         throw Error(response.statusText);
                     }
@@ -42,7 +42,7 @@ ready(() => {
     const temp = document.querySelectorAll('.select-brand');
     if (temp === null) return;
     temp.forEach(element =>
-        element.addEventListener('change', function() {
+        element.addEventListener('change', function () {
             var type = element.value;
             var data = { type: type };
             console.log(data);
@@ -53,7 +53,7 @@ ready(() => {
                 },
                 body: JSON.stringify(data),
             }).
-            then((response) => {
+                then((response) => {
                     if (!response.ok) {
                         throw Error(response.statusText);
                     }
