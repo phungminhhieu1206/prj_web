@@ -59,14 +59,14 @@ $list_menus = db_fetch_array("SELECT*FROM `tbl_menus` ORDER BY `menu_order` ASC"
                         <a href="" title="" id="logo" class="fl-left"><img src="public/images/logo.png" /></a>
                         <div id="search-wp" class="fl-left">
                             <form method="POST" action="tim-kiem.html">
-                                <input type="text" name="clearCache" autocomplete="off" id="s" placeholder="Nhập từ khóa tìm kiếm tại đây!" value="<?php echo set_value('value') ?>">
+                                <input type="text" name="value" id="s" placeholder="Nhập từ khóa tìm kiếm tại đây!" value="<?php echo set_value('value') ?>">
                                 <button type="submit" id="sm-s" name="sm_s" value="Tìm kiếm">Tìm kiếm</button>
                             </form>
                         </div>
                         <div id="action-wp" class="fl-right">
                             <div id="advisory-wp" class="fl-left">
                                 <span class="title">Tư vấn</span>
-                                <span class="phone">0987.654.321</span>
+                                <span class="phone">0981.932.985</span>
                             </div>
                             <div id="btn-respon" class="fl-right"><i class="fa fa-bars" aria-hidden="true"></i></div>
                             <a href="gio-hang.html" title="giỏ hàng" id="cart-respon-wp" class="fl-right">

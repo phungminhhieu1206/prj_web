@@ -38,13 +38,13 @@ if (isset($_POST['btn-reg-email'])) {
                 <h3 class="title">Thông tin cửa hàng</h3>
                 <ul class="list-item">
                     <li>
-                        <p>106 - Trần Bình - Cầu Giấy - Hà Nội</p>
+                        <p>Số 1 - Đại Cồ Việt - Hai Bà Trưng - Hà Nội</p>
                     </li>
                     <li>
-                        <p>0987.654.321 - 0989.989.989</p>
+                        <p>0981.932.985 - 0983.586.790</p>
                     </li>
                     <li>
-                        <p>vshop@gmail.com</p>
+                        <p>ismart_teamcnw@gmail.com</p>
                     </li>
                 </ul>
             </div>
@@ -74,7 +74,7 @@ if (isset($_POST['btn-reg-email'])) {
     </div>
     <div id="foot-bot">
         <div class="wp-inner">
-            <p id="copyright">© Bản quyền thuộc về unitop.vn | Php Master</p>
+            <p id="copyright">© Bản quyền thuộc về team CNWeb | HUST_K63</p>
         </div>
     </div>
 </div>

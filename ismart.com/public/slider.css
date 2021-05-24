@@ -115,7 +115,7 @@
 }
 
 ul#item_slides>li {
-    width: 25%;
+    width: 24.6%;
     margin: 0% 0.2% !important;
     font-size: 14px;
 }
@@ -128,7 +128,7 @@ ul#item_slides>li {
 } */
 
 ul#item_slides>li>a.thumb img {
-    min-width: 197px;
+    min-width: 197.38px;
 }
 
 
