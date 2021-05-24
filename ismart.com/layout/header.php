@@ -21,9 +21,7 @@ $list_menus = db_fetch_array("SELECT*FROM `tbl_menus` ORDER BY `menu_order` ASC"
     <link href="public/responsive.css" rel="stylesheet" type="text/css" />
 
     <script src="public/js/new.js" type="text/javascript"></script>
-    <!-- <script src="public/js/jquery-3.5.0.min.js" type="text/javascript"></script> -->
     <!-- <script src="public/js/elevatezoom-master/jquery.elevatezoom.js" type="text/javascript"></script> -->
-    <!-- <script src="public/js/bootstrap/bootstrap.min.js" type="text/javascript"></script> -->
     <!-- <script src="public/js/carousel/owl.carousel.js" type="text/javascript"></script> -->
     <script src="public/js/main.js" type="text/javascript"></script>
     <script src="public/js/app.js" type="text/javascript"></script>
@@ -71,7 +69,7 @@ $list_menus = db_fetch_array("SELECT*FROM `tbl_menus` ORDER BY `menu_order` ASC"
                                 <span class="phone">0987.654.321</span>
                             </div>
                             <div id="btn-respon" class="fl-right"><i class="fa fa-bars" aria-hidden="true"></i></div>
-                            <a href="?page=cart" title="giỏ hàng" id="cart-respon-wp" class="fl-right">
+                            <a href="gio-hang.html" title="giỏ hàng" id="cart-respon-wp" class="fl-right">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 <span id="num"><?php if (!empty($list_buy)) {
                                                     echo count($list_buy);

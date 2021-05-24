@@ -111,7 +111,7 @@ $list_commune = db_fetch_array('SELECT* FROM `tbl_commune`');
                         <tfoot>
                             <tr class="order-total">
                                 <td>Tổng đơn hàng:</td>
-                                <td><strong class="total-price"><?php echo currency_format($list_info['total'])?></strong></td>
+                                <td><strong class="total-price"><?php if (isset($list_info['total'])) echo currency_format($list_info['total'])?></strong></td>
                             </tr>
                         </tfoot>
                     </table>

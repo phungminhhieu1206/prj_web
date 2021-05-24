@@ -68,13 +68,7 @@ if (isset($_POST['btn-reg-email'])) {
             <div class="block" id="newfeed">
                 <h3 class="title">Bảng tin</h3>
                 <p class="desc">Đăng ký với chung tôi để nhận được thông tin ưu đãi sớm nhất</p>
-                <div id="form-reg">
-                    <?php echo form_error('reg-email')?>
-                    <form method="POST" action="">
-                        <input type="email" name="email" id="email" placeholder="Nhập email tại đây">
-                        <input type="submit" id="sm-reg" name="btn-reg-email" value="Đăng ký">
-                    </form>
-                </div>
+
             </div>
         </div>
     </div>
@@ -90,44 +84,19 @@ if (isset($_POST['btn-reg-email'])) {
     <div id="menu-respon-wp">
         <ul class="" id="main-menu-respon">
             <li>
-                <a href="?page=home" title>Trang chủ</a>
+                <a href="home-1.html" title>Trang chủ</a>
             </li>
             <li>
-                <a href="?page=category_product" title>Điện thoại</a>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="?page=category_product" title="">Iphone</a>
-                    </li>
-                    <li>
-                        <a href="?page=category_product" title="">Samsung</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="?page=category_product" title="">Iphone X</a>
-                            </li>
-                            <li>
-                                <a href="?page=category_product" title="">Iphone 8</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="?page=category_product" title="">Nokia</a>
-                    </li>
-                </ul>
+                <a href="product-2.html" title>Sản phẩm</a>
             </li>
             <li>
-                <a href="?page=category_product" title>Máy tính bảng</a>
+                <a href="Blog-3.html" title>Blog</a>
             </li>
             <li>
-                <a href="?page=category_product" title>Laptop</a>
+                <a href="page-4.html" title>Giới thiệu</a>
             </li>
             <li>
-                <a href="?page=category_product" title>Đồ dùng sinh hoạt</a>
-            </li>
-            <li>
-                <a href="?page=blog" title>Blog</a>
-            </li>
-            <li>
-                <a href="#" title>Liên hệ</a>
+                <a href="page-5.html" title>Liên hệ</a>
             </li>
         </ul>
     </div>

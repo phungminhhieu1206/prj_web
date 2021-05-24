@@ -14,7 +14,7 @@ $list_info = get_info_cart();
                         <a href="?mod=home" title="">Trang chủ</a>
                     </li>
                     <li>
-                        <a href="" title="">Sản phẩm làm đẹp da</a>
+                        <a href="" title="">Giỏ hàng</a>
                     </li>
                 </ul>
             </div>
