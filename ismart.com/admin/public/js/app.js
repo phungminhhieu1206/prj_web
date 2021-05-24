@@ -13,13 +13,12 @@ ready(() => {
         element.addEventListener('change', function () {
             var parent_cat = element.value;
             var data = { parent_cat: parent_cat };
-            console.log(data);
             fetch('?mod=product&controller=product_cat&action=select_brand', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify(data),
+                body: `parent_cat=${parent_cat}`,
             }).
                 then((response) => {
                     if (!response.ok) {
@@ -27,7 +26,7 @@ ready(() => {
                     }
                     return response;
                 })
-                .then((response) => response.json())
+                .then((response) => response.text())
                 .then((data) => {
                     document.querySelector('.select-brand').innerHTML = data;
                 })
@@ -45,13 +44,12 @@ ready(() => {
         element.addEventListener('change', function () {
             var type = element.value;
             var data = { type: type };
-            console.log(data);
             fetch('?mod=product&controller=product_cat&action=select_type', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify(data),
+                body: `type=${type}`,
             }).
                 then((response) => {
                     if (!response.ok) {
@@ -59,7 +57,7 @@ ready(() => {
                     }
                     return response;
                 })
-                .then((response) => response.json())
+                .then((response) => response.text())
                 .then((data) => {
                     document.querySelector('.select-type').innerHTML = data;
                 })

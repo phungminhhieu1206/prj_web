@@ -7,10 +7,6 @@ function ready(fn) {
 }
 
 ready(function () {
-
-    // var height = $(window).height() - $('#footer-wp').outerHeight(true) - $('#header-wp').outerHeight(true);
-    // $('#content').css('min-height', height);
-
     //  CHECK ALL
     const input = document.querySelector('input[name="checkAll"]');
     input?.addEventListener("click", function () {

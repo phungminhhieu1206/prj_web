@@ -55,52 +55,10 @@
             </span>
             <ul class="sub-menu">
                 <li class="nav-item">
-                    <a href="?mod=customers&action=index" title="" class="nav-link">Danh sách đơn hàng</a>
+                    <a href="?mod=orders&controller=order&action=index" title="" class="nav-link">Danh sách đơn hàng</a>
                 </li>
                 <li class="nav-item">
-                    <a href="?mod=customers&controller=customer&action=customer" title="" class="nav-link">Danh sách khách hàng</a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <span class="nav-link nav-toggle">
-                <span class="fa fa-cubes icon"></span>
-                <span class="title">Khối giao diện</span>
-            </span>
-            <ul class="sub-menu">
-                <li class="nav-item">
-                    <a href="?mod=menu&action=add_menu" title="" class="nav-link">Thêm mới</a>
-                </li>
-                <li class="nav-item">
-                    <a href="?page=list_widget" title="" class="nav-link">Danh sách khối</a>
-                </li>
-                <li class="nav-item">
-                    <a href="?mod=menu&action=add_menu" title="" class="nav-link">Menu</a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <span class="nav-link nav-toggle">
-                <i class="fa fa-sliders" aria-hidden="true"></i>
-                <span class="title">Slider</span>
-            </span>
-            <ul class="sub-menu">
-                <li class="nav-item">
-                    <a href="?mod=slider&action=add_slider" title="" class="nav-link">Thêm mới</a>
-                </li>
-                <li class="nav-item">
-                    <a href="?mod=slider&action=index" title="" class="nav-link">Danh sách slider</a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <span class="nav-link nav-toggle">
-                <i class="fa fa-file-image-o" aria-hidden="true"></i>
-                <span class="title">Media</span>
-            </span>
-            <ul class="sub-menu">
-                <li class="nav-item">
-                    <a href="?mod=media&action=index" title="" class="nav-link">Danh sách media</a>
+                    <a href="?mod=orders&controller=customer&action=customer" title="" class="nav-link">Danh sách khách hàng</a>
                 </li>
             </ul>
         </li>

@@ -1,10 +1,12 @@
 <?php
-function construct(){
+function construct()
+{
     load_model('index');
 }
-function info_accountAction(){
+function info_accountAction()
+{
     load('helper', 'image');
-	global $fullname, $email,$tel,$address, $error, $avatar, $user;
+    global $fullname, $email, $tel, $address, $error, $avatar, $user;
     //Chuẩn hóa dữ liệu Login
     if (isset($_POST['btn-submit'])) {
         $error = array();
@@ -19,43 +21,43 @@ function info_accountAction(){
             }
         }
         if (!empty($_POST['email'])) {
-                $email = $_POST['email'];
-                is_email($email);
-                $data['email'] = $email;
+            $email = $_POST['email'];
+            is_email($email);
+            $data['email'] = $email;
         }
         if (!empty($_POST['tel'])) {
-                $tel = $_POST['tel'];
-                $data['tel'] = $tel;
+            $tel = $_POST['tel'];
+            $data['tel'] = $tel;
         }
 
         if (!empty($_POST['address'])) {
-                $address = $_POST['address'];
-                $data['address'] = $address;
+            $address = $_POST['address'];
+            $data['address'] = $address;
         }
         // check upload file
-        if(isset($_FILES['file']) && !empty($_FILES['file']['name'])){
+        if (isset($_FILES['file']) && !empty($_FILES['file']['name'])) {
             $type = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
             $size = $_FILES['file']['size'];
             if (!is_image($type, $size)) {
                 $error['upload_image'] = "Kích thước hoặc kiểu ảnh không đúng";
             } else {
                 $old_thumb = info_user('avatar');
-                if(!empty($old_thumb)){
+                if (!empty($old_thumb)) {
                     delete_image($old_thumb);
-                    $avatar = upload_image('public/images/upload/admins/', $type); 
+                    $avatar = upload_image('public/images/upload/admins/', $type);
                     $data['avatar'] = $avatar;
                 } else {
                     $avatar = upload_image('public/images/upload/admins/', $type);
                     $data['avatar'] = $avatar;
                 }
             }
-        } else{
+        } else {
             $avatar = info_user('avatar');
             $data['avatar'] = $avatar;
         }
         if (empty($error)) {
             if (!empty($data)) {
-            	$user = $_SESSION['user_login'];
+                $user = $_SESSION['user_login'];
                 update_info_account($data, $user);
                 $error['account'] = 'Cập nhật tài khoản thành công';
             } else {
@@ -65,12 +67,13 @@ function info_accountAction(){
             print_r($error);
         }
     }
-	load_view('info_account');
+    load_view('info_account');
 }
 
 
 // Đổi mật khẩu
-function resetAction(){
+function resetAction()
+{
     global $password, $error;
     //Chuẩn hóa dữ liệu Login
     if (isset($_POST['btn-submit'])) {
@@ -79,7 +82,7 @@ function resetAction(){
 
         if (empty($_POST['pass-old'])) {
             $error['pass-old'] = 'Bạn chưa nhập mật khẩu cũ';
-        } else { 
+        } else {
             $pass_old = $_POST['pass-old'];
             is_password($pass_old);
         }
@@ -91,7 +94,7 @@ function resetAction(){
                 $error['pass-new'] = 'Mật khẩu yêu cầu từ 6 đến 32 ký tự';
             } else {
                 $pass_new = $_POST['pass-new'];
-                is_password($pass_new );
+                is_password($pass_new);
             }
         }
 
@@ -102,16 +105,16 @@ function resetAction(){
         }
 
         if (empty($error)) {
-            if(md5($pass_old) != $password){
+            if (md5($pass_old) != $password) {
                 $error['pass-old'] = "Mật khẩu cũ chưa đúng";
-            } else{
-                if($confirm_pass == $pass_new){
+            } else {
+                if ($confirm_pass == $pass_new) {
                     $data = array(
-                        'password'=> md5($pass_new)
+                        'password' => md5($pass_new)
                     );
                     update_pass_new($data);
                     $error['change-pass'] = 'Bạn đã đổi mật khẩu thành công';
-                } else{
+                } else {
                     $error['confirm-pass'] = 'Xác nhận mật khẩu mới chưa đúng';
                 }
             }
@@ -122,11 +125,13 @@ function resetAction(){
     load_view('reset');
 }
 // Thêm mới
-function add_catAction(){
+function add_catAction()
+{
     load_view('add_cat');
 }
 //Đăng nhập
-function loginAction() {
+function loginAction()
+{
     global $username, $password, $error;
     //Chuẩn hóa dữ liệu Login
     if (isset($_POST['btn-login'])) {
@@ -174,7 +179,8 @@ function loginAction() {
     load_view('login');
 }
 
-function logoutAction() {
+function logoutAction()
+{
     global $username;
     // update_not_active_user();
     update_not_active_admin();
