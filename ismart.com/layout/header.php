@@ -12,17 +12,13 @@ $list_menus = db_fetch_array("SELECT*FROM `tbl_menus` ORDER BY `menu_order` ASC"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="<?php echo base_url(); ?>" />
     <link href="public/reset.css" rel="stylesheet" type="text/css" />
-    <!-- <link href="public/css/carousel/owl.carousel.css" rel="stylesheet" type="text/css"/> -->
-    <!-- <link href="public/css/carousel/owl.theme.css" rel="stylesheet" type="text/css"/> -->
     <link href="public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="public/style.css" rel="stylesheet" type="text/css" />
     <link href="public/main.css" rel="stylesheet" type="text/css" />
     <link href="public/slider.css" rel="stylesheet" type="text/css" />
     <link href="public/responsive.css" rel="stylesheet" type="text/css" />
 
-    <script src="public/js/new.js" type="text/javascript"></script>
-    <!-- <script src="public/js/elevatezoom-master/jquery.elevatezoom.js" type="text/javascript"></script> -->
-    <!-- <script src="public/js/carousel/owl.carousel.js" type="text/javascript"></script> -->
+    <script src="public/js/slider.js" type="text/javascript"></script>
     <script src="public/js/main.js" type="text/javascript"></script>
     <script src="public/js/app.js" type="text/javascript"></script>
     <script src="public/js/zoom.js" type="text/javascript"></script>

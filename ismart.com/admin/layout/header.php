@@ -11,11 +11,10 @@
     <link href="public/main.css" rel="stylesheet" type="text/css" />
     <link href="public/responsive.css" rel="stylesheet" type="text/css" />
 
-
     <script src="public/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
     <script src="public/js/main.js" type="text/javascript"></script>
     <script src="public/js/app.js" type="text/javascript"></script>
-    <script src="public/js/new.js" type="text/javascript"></script>
+    <script src="public/js/menu_login.js" type="text/javascript"></script>
 </head>
 
 <body>
