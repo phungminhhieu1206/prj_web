@@ -44,7 +44,7 @@
                     <a href="?mod=product&action=index" title="" class="nav-link">Danh sách sản phẩm</a>
                 </li>
                 <li class="nav-item">
-                    <a href="?mod=product&action=product_cat" title="" class="nav-link">Danh mục sản phẩm</a>
+                    <a href="?mod=product&controller=product_cat&action=index" title="" class="nav-link">Danh mục sản phẩm</a>
                 </li>
             </ul>
         </li>
